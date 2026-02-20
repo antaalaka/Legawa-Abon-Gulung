@@ -1,0 +1,385 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #2b2b2b;
+    background-color: #faf8f5;
+    line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff;
+    padding: 5px 80px;
+
+    display: flex;
+    align-items: center;
+}
+
+/* LOGO KIRI */
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+/* MENU TENGAH */
+.nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* LINK MENU */
+.nav-center a {
+    margin: 0 25px;
+    text-decoration: none;
+    color: #2b2b2b;
+    font-weight: 700;        /* BOLD */
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 6px;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a::after {
+    content: "";
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #c9a24d;   /* GOLD */
+    transition: width 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: #c9a24d;
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+
+/* HERO */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("./images/Abon.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.hero-text {
+    max-width: 500px;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+/* BUTTONS */
+.btn-primary {
+    padding: 14px 32px;
+    background-color: #c9a24d;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.btn-secondary {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 10px 24px;
+    border: 1px solid #c9a24d;
+    color: #c9a24d;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* ============================= */
+/* EFEK HOVER TOMBOL ORDER NOW   */
+/* ============================= */
+
+.btn-secondary {
+    position: relative;
+    display: inline-block;
+    padding: 12px 28px;
+    border: 2px solid #c9a24d; /* border gold */
+    color: #c9a24d;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+/* Overlay halus */
+.btn-secondary::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 0;
+    background: rgba(255, 255, 255, 0.1);
+    transition: width 0.3s ease;
+    z-index: 0;
+}
+
+/* Hover tombol */
+.btn-secondary:hover {
+    color: #fff; /* teks putih */
+    background-color: #c9a24d; /* background gold */
+    transform: scale(1.05); /* membesar sedikit */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* shadow halus */
+}
+
+/* Overlay melebar saat hover */
+.btn-secondary:hover::after {
+    width: 100%;
+}
+
+/* Teks tetap di atas overlay */
+.btn-secondary span {
+    position: relative;
+    z-index: 1;
+}
+
+/* PRODUCTS */
+.products {
+    padding: 100px 80px;
+    text-align: center;
+}
+
+.products h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+.product-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.product-card img {
+    width: 70%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 10px;
+}
+
+.price {
+    display: block;
+    margin: 15px 0;
+    font-weight: 500;
+}
+
+/* ABOUT */
+.about {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 100px 80px;
+}
+
+.about-content {
+    max-width: 600px;
+}
+
+.about h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+/* CONTACT */
+.contact {
+    padding: 100px 80px;
+    text-align: center;
+}
+
+.contact .btn-primary {
+    margin-bottom: 40px;
+}
+
+.map {
+    margin-top: 20px;
+}
+
+
+.contact h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+ 
+.contact .btn-primary {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1f1f1f;
+    color: #aaa;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.map a {
+    display: block;
+    cursor: pointer;
+}
+
+.map a:hover {
+    opacity: 0.95;
+}
+
+.map {
+    margin-top: 30px;
+}
+
+.map-note {
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    margin-top: 10px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    display: block;
+}
+
+.product-card h3 {
+    margin: 15px 0;
+}
+
+.product-card p {
+    margin: 4px 0;
+    font-size: 14px;
+}
+
+
+@media (max-width: 768px) {
+
+    /* ================= NAVBAR ================= */
+
+    
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 5%;
+        gap: 12px;
+        text-align: center;
+
+    }
+
+    .logo {
+        padding-bottom: 26px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .logo img {
+        width: 120px;
+    }
+    
+    .nav-center {
+        /* position: static; */
+        padding-top: 66px;
+        width: 100%;
+        gap: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .nav-center a {
+        margin: 0;
+        font-size: 14px;
+        
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+        height: 80vh;
+        padding: 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    /* ================= PRODUCTS ================= */
+
+    .products {
+        padding: 24px 5%;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .product-card img {
+        max-width: 190px;
+    }
+
+    /* ================= ABOUT & CONTACT ================= */
+
+
+    .about {
+        /* padding: 60px 50px; */
+        margin-bottom: 0px;
+    }
+    .contact {
+        padding: 60px 5%;
+    }
+
+}
