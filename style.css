@@ -388,5 +388,59 @@ footer {
     .contact {
         padding: 60px 5%;
     }
+/* HERO TEXT MOBILE FIX */
 
+.hero-text {
+    max-width: 100%;
+    text-align: left;
+}
+
+.hero-text h1 {
+    font-size: 50px;   /* Besarkan dari 32px */
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* HERO MOBILE POSITION FIX */
+
+.hero {
+    height: 100vh;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;   /* tetap center horizontal */
+    align-items: flex-start;   /* dorong ke atas */
+    padding-top: 5px;         /* kontrol jarak dari atas */
+    text-align: center;
+}
+
+.hero-text {
+    width: 100%;
+}
+
+.hero-text h1 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        background-position: center 10%; /* geser background ke atas */
+        background-size: cover;
+    }
+
+}
 }
